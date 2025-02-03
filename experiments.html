@@ -24,11 +24,115 @@
         </aside>
     </article>
     
+    <!--audio -->
+    <div>
+        <audio controls>
+            <source src="audio-file.mp3" type="audio/mpeg">
+        </audio>
+        <p> There is no sound here.</p>
+    </div>
 
-      <!--abbr -->
+    <!--button -->
+    <button onclick="alert('yullo there!')">Click Me</button> 
+    <br>
 
+    <!--canvas -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #b11e1e;"></canvas>
+    <br>
 
+    <table>
+        <caption>To Do List</caption>
+        <tr><th>Class </th><th>HW</th></tr>
+        <tr><td>Class 2</td><td>10 Math Problems</td></tr>
+        <tr><td>Class 5</td><td>Read</td></tr>
+    </table>
+    </table>
 
+     <!--code -->
+    <p>To update code in repo: <br>
+         <code>git add . <br>
+               git commit -m "message" <br>
+               git push 
+        </code> 
+    </p>
+
+    <table>
+        <colgroup>
+            <col style="background-color: rgb(77, 226, 228);">
+            <col style="background-color: rgb(255, 255, 255);">
+        </colgroup>
+        <tr><th>Task</th><th>Deadline</th></tr>
+        <tr><td>Design</td><td>June 2023</td></tr>
+    </table>
+    <br>
+
+    <div>
+        <p> What is your favorite browser?</p>
+        <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+            </datalist>
+    </div>
+   
+    <dl>
+        <dt>Apple</dt>
+        <dd>I like them more than oranges.</dd>
+        
+        <dt>Oranges</dt>
+        <dd>Good for orange juice.</dd>
+    </dl>
+    <br>
+
+     <!--del-->
+    <p>I like cats <del>dogs</del>.</p>
+
+    <!--dfn-->
+    <p>A <dfn title="Cascading Style Sheets">CSS</dfn> stylesheet defines the layout of an HTML document.</p>
+
+    <!--dialog-->
+    <dialog open>
+        <p>Very important! READ Please!</p>
+    </dialog>
+    <br>
+
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </fieldset>
+
+    <figure>
+        <img src="/images/linkedIn_icon.png" alt="LinkedIn">
+        <figcaption>LinkedIn logo has some requirements to use it.</figcaption>
+    </figure>
+    
+    <form action="/submit-form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <input type="submit" value="Submit">
+    </form>
+
+    <header>
+        <h1>Welcome to thje Website</h1>
+        <nav>
+            <a href="#home">Home</a> |
+        </nav>
+    </header>
+
+    <h2>Introduction</h2>
+        <p>This is the introduction section.</p>
+    <hr>
+    <h2>Conclusion</h2>
+        <p>This is the conclusion section.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoid" frameborder="0" allowfullscreen></iframe>
 
   </body>
 </html>
