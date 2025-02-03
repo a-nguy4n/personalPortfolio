@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements Page</title>
+    <style>
+        fancy-card {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            background-color: #e8f5e9;
+            margin-bottom: 20px;
+        }
+
+        fancy-card h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        fancy-card p {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Custom Elements Demonstration</h1>
+
+    <!-- Semantic CSS Custom Element -->
+    <fancy-card>
+        <h3>Custom Fancy Card</h3>
+        <p>A very fancy, handy-dandy card.</p>
+    </fancy-card>
+
+    <h2> *** check console for hello world element print ***</h2>
+    <!-- Hello World Custom Element -->
+    <hello-world></hello-world>
+
+    <script>
+        // Hello World Custom Element: Logs "Hello, world!" to the console
+        class ConsoleLog extends HTMLElement {
+            constructor() {
+                super();
+                console.log("Hello, world!");
+            }
+        }
+
+        class FancyCard extends HTMLElement {
+            constructor() {
+                super(); 
+            }
+        }
+
+        customElements.define('hello-world', ConsoleLog);
+        customElements.define('fancy-card', FancyCard);
+    </script>
+
+</body>
+</html>
