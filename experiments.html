@@ -4,6 +4,11 @@
   <head>
       <meta charset="UTF-8">
       <title> EXPERIMENTS</title>
+      <style>
+        .red-text {
+            font-weight: bold;
+        }
+    </style>
   </head>
   
   <body>
@@ -43,7 +48,6 @@
         <tr><td>Class 2</td><td>10 Math Problems</td></tr>
         <tr><td>Class 5</td><td>Read</td></tr>
     </table>
-    </table>
 
      <!--code -->
     <p>To update code in repo: <br>
@@ -54,13 +58,16 @@
     </p>
 
      <!--colgroup, col -->
-    <table>
+     <table>
         <colgroup>
             <col style="background-color: rgb(77, 226, 228);">
+            <col>
         </colgroup>
         <tr><th>Task</th><th>Deadline</th></tr>
         <tr><td>Design</td><td>June 2023</td></tr>
     </table>
+    <br>
+    
     <br>
 
      <!--datalist, input, option -->
@@ -108,18 +115,18 @@
 
         <label for="message">Your Message:</label><br>
         <textarea id="message" name="message" rows="4" cols="50">Enter your text here...</textarea>
+    </fieldset>
 
     <!--figure-->
     <figure>
-        <img src="/images/linkedIn_icon.png" alt="LinkedIn" width="4%">
+        <img src="/images/linkedIn_icon.png" alt="LinkedIn" width="4">
         <figcaption>LinkedIn logo has some requirements to use it.</figcaption>
     </figure>
     
     <!--form-->
     <form action="/submit-form" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-    
+        <input type="text" id="name-in" name="your-name" required><br><br>
         <input type="submit" value="Submit">
     </form>
 
@@ -128,12 +135,8 @@
         <ins class="highlight">New content goes here</ins>
     </p>
 
-    <kbd>
-        <h2>Keyboard Commands:</h2>
-        <p>To save your work, press <kbd>Ctrl</kbd> + 
-            <kbd>S</kbd> on Windows or <kbd>Cmd</kbd> + 
-            <kbd>S</kbd> on Mac.</p>
-    </kbd>
+    <p> <b> Keyboard Commands: </b><p>
+    <p>  <kbd>Ctrl</kbd> + <kbd>S</kbd> on Windows or <kbd>Cmd</kbd> + <kbd>S</kbd> on Mac</p>
 
      <!--noscript-->
     <noscript>
@@ -196,12 +199,6 @@
     
         <!-- noscript, span, style-->
 
-        <style>
-            .red-text {
-                font-weight: bold;
-            }
-        </style>
-
         <noscript>
             <p> <span style="color: red;"> JavaScript is disabled. The canvas and analytics features may not work properly. </span></p>
         </noscript>
@@ -225,6 +222,5 @@
         <source src="sample-video.mp4" type="video/mp4">
         Can't play vid. :/
     </video>
-    
   </body>
 </html>
