@@ -24,7 +24,7 @@
         </aside>
     </article>
     
-    <!--audio -->
+    <!--audio, source -->
     <div>
         <audio controls>
             <source src="audio-file.mp3" type="audio/mpeg">
@@ -33,13 +33,10 @@
     </div>
 
     <!--button -->
-    <button onclick="alert('yullo there!')">Click Me</button> 
+    <button>Click Me</button> 
     <br>
 
-    <!--canvas -->
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #b11e1e;"></canvas>
-    <br>
-
+     <!--table, caption, tr, th-->
     <table>
         <caption>To Do List</caption>
         <tr><th>Class </th><th>HW</th></tr>
@@ -56,6 +53,7 @@
         </code> 
     </p>
 
+     <!--colgroup, col -->
     <table>
         <colgroup>
             <col style="background-color: rgb(77, 226, 228);">
@@ -66,6 +64,7 @@
     </table>
     <br>
 
+     <!--datalist, input, option -->
     <div>
         <p> What is your favorite browser?</p>
         <input list="browsers" name="browser" id="browser">
@@ -77,6 +76,7 @@
             </datalist>
     </div>
    
+     <!--dl, dt, dd -->
     <dl>
         <dt>Apple</dt>
         <dd>I like them more than oranges.</dd>
@@ -98,6 +98,7 @@
     </dialog>
     <br>
 
+    <!--fieldset, legend, label, textarea-->
     <fieldset>
         <legend>Personal Information</legend>
         <label for="name">Name:</label>
@@ -105,13 +106,18 @@
     
         <label for="email">Email:</label>
         <input type="email" id="email" name="email">
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50">Enter your text here...</textarea>
     </fieldset>
 
+    <!--figure-->
     <figure>
-        <img src="/images/linkedIn_icon.png" alt="LinkedIn">
+        <img src="/images/linkedIn_icon.png" alt="LinkedIn" width="4%">
         <figcaption>LinkedIn logo has some requirements to use it.</figcaption>
     </figure>
     
+    <!--form-->
     <form action="/submit-form" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -119,20 +125,93 @@
         <input type="submit" value="Submit">
     </form>
 
-    <header>
-        <h1>Welcome to thje Website</h1>
-        <nav>
-            <a href="#home">Home</a> |
-        </nav>
-    </header>
+    <!--ins-->
+    <p>This is the original paragraph. 
+        <ins class="highlight">New content goes here</ins>
+    </p>
 
-    <h2>Introduction</h2>
-        <p>This is the introduction section.</p>
+    <kbd>
+        <h2>Keyboard Commands:</h2>
+        <p>To save your work, press <kbd>Ctrl</kbd> + 
+            <kbd>S</kbd> on Windows or <kbd>Cmd</kbd> + 
+            <kbd>S</kbd> on Mac.</p>
+    </kbd>
+
+     <!--noscript-->
+    <noscript>
+        <p>JavaScript is disabled in your browser. Some features on this page may not work properly.</p>
+    </noscript>
+
+    <!--optgroup, select-->
+
+    <h2>Select Random Things</h2>
+        <form action="#">
+            <label>Choose random stuff:</label><br>
+            <select>
+                <optgroup label="color">
+                    <option value="pink">pink</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                </optgroup>
+                <optgroup label="food">
+                    <option value="pasta">pasta</option>
+                    <option value="smoothieBowl">smoothie bowl</option>
+                    <option value="chicken">chicken</option>
+                </optgroup>
+            </select>
+        </form>
+
+      <!--pre-->
+    <h2>Preformatted Code Example</h2>
+    <pre>
+        function greet(name) {
+            console.log("Hello, " + name + "!");
+        }
+        greet("World");
+    </pre>
+
     <hr>
-    <h2>Conclusion</h2>
-        <p>This is the conclusion section.</p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoid" frameborder="0" allowfullscreen></iframe>
+     <!--canvas, script, noscript-->
+    <div>
+        <h2>Canvas Placeholder:</h2>
+        <canvas id="exampleCanvas" width="400" height="200">
+            Can't support canvas.
+        </canvas>
+    
+        <script>
+            console.log("Google Analytics placeholder script loaded.");
+        </script>
+    
+        <!-- Canvas Script Placeholder -->
+        <script>
+            // Basic canvas placeholder setup (no interactions)
+            const canvas = document.getElementById('exampleCanvas');
+            const context = canvas.getContext('2d');
+    
+            // Draw a static rectangle as an example
+            context.fillStyle = "lightblue";
+            context.fillRect(50, 50, 300, 100);
+            context.strokeStyle = "blue";
+            context.strokeRect(50, 50, 300, 100);
+        </script>
+    
+        <!-- noscript for non-JS browsers -->
+        <noscript>
+            <p style="color: red;">JavaScript is disabled. The canvas and analytics features may not work properly.</p>
+        </noscript>
+    </div>
+
+    <!-- span-->
+    <p>This is a normal sentence with <span style="color: rgb(48, 127, 12);">highlighted text</span>.</p>
+
+    <!-- video -->
+    <video width="320" height="240" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Can't play vid. :/
+    </video>
+    
+   
 
   </body>
 </html>
