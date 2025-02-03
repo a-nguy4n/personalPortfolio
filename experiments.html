@@ -57,7 +57,6 @@
     <table>
         <colgroup>
             <col style="background-color: rgb(77, 226, 228);">
-            <col style="background-color: rgb(255, 255, 255);">
         </colgroup>
         <tr><th>Task</th><th>Deadline</th></tr>
         <tr><td>Design</td><td>June 2023</td></tr>
@@ -109,7 +108,6 @@
 
         <label for="message">Your Message:</label><br>
         <textarea id="message" name="message" rows="4" cols="50">Enter your text here...</textarea>
-    </fieldset>
 
     <!--figure-->
     <figure>
@@ -196,14 +194,31 @@
             context.strokeRect(50, 50, 300, 100);
         </script>
     
-        <!-- noscript for non-JS browsers -->
+        <!-- noscript, span, style-->
+
+        <style>
+            .red-text {
+                font-weight: bold;
+            }
+        </style>
+
         <noscript>
-            <p style="color: red;">JavaScript is disabled. The canvas and analytics features may not work properly.</p>
+            <p> <span style="color: red;"> JavaScript is disabled. The canvas and analytics features may not work properly. </span></p>
         </noscript>
     </div>
 
-    <!-- span-->
-    <p>This is a normal sentence with <span style="color: rgb(48, 127, 12);">highlighted text</span>.</p>
+    <!--svg -->
+    <span class="icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="blue">
+            <circle cx="12" cy="12" r="10" />
+            <rect x="10" y="5" width="4" height="14" fill="white" />
+        </svg>
+    </span>
+
+    <!--template-->
+    <template id="hidden-message">
+        <p>This is a hidden message stored within a template element.</p>
+    </template>
 
     <!-- video -->
     <video width="320" height="240" controls>
@@ -211,7 +226,5 @@
         Can't play vid. :/
     </video>
     
-   
-
   </body>
 </html>
