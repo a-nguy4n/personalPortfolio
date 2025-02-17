@@ -1,0 +1,142 @@
+@font-face{
+    font-family: "Finger Paint";
+    src: url("/fonts/FingerPaint-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+
+body{
+    background-color: #FFFAF2;
+    margin: 0;
+}
+
+/* -------- General Page Styling -------- */
+body {
+    background-color: #FFFAF2;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: light;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#resumePageTitle{
+    font-size: 2.5rem;
+    color: #D268AC;
+    text-align: start;
+    font-family: 'Finger Paint', sans-serif;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#resumeDoc{
+    display: block;
+    text-align: start;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+#resumeDoc:hover {
+    color: #1f38d6;
+}
+
+main{
+    width: 85%;
+    margin: auto;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #070606;
+    border-bottom: 2px solid #D268AC;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+address {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: light;
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+strong {
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    background-color: #EAEAEA;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+ol li {
+    margin-bottom: 1.5rem;
+}
+
+i {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.experienceSection p,
+.projectsSection p {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    ul li {
+        width: auto;
+        padding: 5px 10px;
+    }
+}

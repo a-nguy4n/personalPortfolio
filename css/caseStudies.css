@@ -1,0 +1,49 @@
+/* General Page Styling */
+body {
+    background-color: #FFFAF2;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3998D3;
+    margin-bottom: 20px;
+}
+.case-studies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.case-study {
+    background: white;
+    border: 3px solid #3998D3;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.case-study:hover{
+    transform: scale(1.05);
+}
+
+.case-study img{
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.work-in-progress{
+    background: #E0F2FF;
+    border: 2px dashed #3998D3;
+    color: #3998D3;
+    font-weight: bold;
+    padding: 40px;
+}

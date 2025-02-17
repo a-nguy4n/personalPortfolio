@@ -1,0 +1,49 @@
+body {
+    background-color: #FFF6E8;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #D268AC;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.project {
+    background: white;
+    border: 3px solid #D268AC;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.work-in-progress {
+    background: #FDE8F2;
+    border: 2px dashed #D268AC;
+    color: #D268AC;
+    font-weight: bold;
+    padding: 40px;
+}
