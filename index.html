@@ -1,81 +1,48 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang = "en"> 
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/homePage.css">
-    <title> Main Page</title>
+    <link rel="stylesheet" href="css/landingPage.css">
+    <title> Landing Page</title>
 </head>
 
 <body>
-    <div class="homeCardHeader">
-        <h1 id="homeCardTitle"> Postfolio</h1>
-        <section class="address">
-            <h2 id="myName">  Allison Nguyen </h2>
-            <p>Computer Engineering | Design Minor</p>
-            <p>UC San Diego</p>
-            <p>1512alli@gmail.com</p>
+    <div class="landingPageContainer">
+
+        <section id="landingHeaders"> 
+            <h1 id="greetings"> Greetings </h1> 
+            <h1 id="from-my"> from my </h1>
         </section>
-            
-        <div class="home-stamp"> 
-            <img src="/images/stampOutline.png" alt="StampOutline" id="homeStampOutline">
-            <img src="/images/stampProfile.png" alt="StampProfile" id="homeStampProfile">
-            <img src="/images/squiggleMagenta.png" alt="MagentaSquiggle" id="homeStampSquiggle">
+       
+        <div class="blockLetters">
+            <img src="images/blockLetters/P.png" alt="Block-P">
+            <img src="images/blockLetters/O.png" alt="Block-O" id="letterO-one">
+            <img src="images/blockLetters/S.png" alt="Block-S">
+            <img src="images/blockLetters/T.png" alt="Block-T">
+            <img src="images/blockLetters/F.png" alt="Block-F">
+            <img src="images/blockLetters/O.png" alt="Block-O" id="letterO-two">
+            <img src="images/blockLetters/L.png" alt="Block-L">
+            <img src="images/blockLetters/I.png" alt="Block-I">
+            <img src="images/blockLetters/O.png" alt="Block-O" id="letterO-three">
+        </div>
+
+        <div class="taglinePart">
+            <img src="images/landingProfile.png" alt="LandingProf" id="landingProfile">
+            <section class="tagLineText">
+                <p id="landingTagLine"> 
+                    A collection of my works as a <span data-color="olive">computer engineer</span> 
+                    and <span data-color="mulberry">designer</span> <br>
+                    turning ideas into <span data-color="teal">innovative, human-centered</span> solutions. 
+                    <br>
+                    <br>
+                    Feel free to explore my work and learn about creative process. 
+                </p>
+
+                <a href="index.html" class="explore-button">Explore!</a>
+            </section>
         </div>
     </div>
-
-    <div class="homeContentBody">
-        <section class="aboutMe">
-            <h2 class="sectionHeaders"> About Me</h2>
-            <p id="about-description">
-                &nbsp;&nbsp; Hello! My name is Allison Nguyen! I am currently a student at the University of 
-                California, San Diego studying Computer Engineering and minoring in Design. I choose to study 
-                Computer Engineering as it provides me the best of both worlds with software and hardware.
-                <br>
-                <br>
-                &nbsp;&nbsp; In the future, I aspire to be a product designer of sorts where I can work between 
-                software, hardware, and design. I hope to one day develop and design a product that can serve 
-                to be a great vitamin for everyday life.
-                <br>
-                <br>
-                &nbsp;&nbsp; Beyond my academic journey, I enjoy spending time outdoors and discovering new
-                places. Specifically, I love going around and trying out new coffee shops and bakeries, 
-                hiking new trails, or just listening to music on walks.
-                <br>
-                <br>
-                &nbsp;&nbsp; A little fun fact about me is that wherever I go or travel to, I collect postcards
-                as a souvenir. I feel like postcards are a small, but meaningful (and inexpensive) way to capture
-                my experiences and snapshots from my travels. 
-            </p>
-        </section>
-
-        <hr class="vertical-hr">
-      
-        <section class="directory">
-            <h2 class="sectionHeaders"> To: </h2>
-            <nav class="homeNav">
-                <a href="resume.html" id="resumeLink">Resume</a><br>
-                <a href="projects.html" id="projectsLink">Projects</a><br>
-                <a href="caseStudies.html" id="caseStudiesLink">Case Studies</a><br>
-                <a href="extraDetails.html" id="extraLink">My Extra Details</a><br>      
-                <a class="hidden-text">&nbsp;</a>
-            </nav>
-
-            <section class="socialBar">
-                <a href="https://www.linkedin.com/in/allison-nguyen-668598296/" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/linkedIn_icon.png" alt="linkedinIcon">
-                </a>
     
-                <a href="https://github.com/a-nguy4n" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/githubIcon.png" alt="gitIcon">
-                </a>
-    
-                <a href="mailto:1512alli@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/images/gmailIcon.png" alt="gmailIcon">
-                </a>
-            </section>
-        </section>
-    </div>
-   
 </body>
 </html>
