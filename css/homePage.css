@@ -132,7 +132,6 @@ body{
 .directory nav {
     display: flex;
     flex-direction: column;
-    gap: 2px;
     align-items: center;
 }
 
@@ -140,12 +139,14 @@ body{
     text-decoration: none;
     color: black;
     font-family: "Gaegu";
-    font-size: 1.85rem;
+    font-size: 1.80rem;
     text-align: center;
     display: block; 
     border-bottom: 1px solid black; 
     width: 65%; 
     margin: 0 auto; 
+    padding-top: 2.5%;
+    padding-bottom: 0%;
 }
 
 #resumeLink:hover{
@@ -164,6 +165,10 @@ body{
     color:#B0081F;
 }
 
+#contactMeLink:hover{
+    color:#D268AC;
+}
+
 .socialBar{
     display: flex;
     justify-content: center; 
@@ -172,5 +177,5 @@ body{
 }
 
 .socialBar img{
-    width: 3.5vw;
+    width: 3vw;
 }
