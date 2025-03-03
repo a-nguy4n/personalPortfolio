@@ -39,6 +39,11 @@ body{
     padding: 2%;
 }
 
+.contactForm textarea{
+    overflow-y: auto;  
+    resize: none;     
+}
+
 .contactForm input, 
 .contactForm textarea{
     width: 100%;
@@ -102,7 +107,7 @@ body{
 
 .required{
     color: red;
-    font-weight: bold;
+    font-weight: normal;
     margin-left: 5px;
 }
 
@@ -151,3 +156,25 @@ output{
 .stamp img {
     width: 10vw;
 }
+
+.error-inline{
+    color: rgb(187, 31, 31);
+    font-size: 0.7em;
+    margin-left: 1%;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out;
+  }
+
+  .error-inline.visible{
+    opacity: 1;
+  }
+
+  .flash-error{
+    animation: flash 4s ease-in-out;
+  }
+
+  @keyframes flash{
+    0% { background-color: #f3cece; }
+    50% { background-color: #ffffff; }
+    100% { background-color: #f7bebe; }
+  }

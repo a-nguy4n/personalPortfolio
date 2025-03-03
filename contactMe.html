@@ -1,61 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me Page</title>
-    <link rel="stylesheet" href="css/contactMe.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me Page</title>
+  <link rel="stylesheet" href="css/contactMe.css">
 </head>
 <body>
+  <h1 id="contactPageTitle"> Write to Me!</h1>
 
-    <h1 id="contactPageTitle"> Write to Me!</h1>
+  <div class="contactPostcard">
+    <section class="contactForm">
 
-    <div class="contactPostcard">
-        <section class="contactForm">
-            <form action="https://httpbin.org/post" method="POST">
-                <label for="fullName"> Full Name: <span class="required">*</span></label>
-                <input type="text" id="fullName" name="fullName" required
-                        placeholder="Enter your full name">
-            
-                <label for="phoneNumber"> Phone: </label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" 
-                       pattern="^[\d\s\-\(\)]+$"
-                       minlength="10" maxlength="23"
-                       placeholder="Enter your phone number (optional)">
-            
-                <label for="email"> Email: <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required
-                       placeholder="Enter your email">
-                       
-                <label for="message">Message: <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="6" required minlength="10" maxlength="500"
-                        placeholder="Write me a message!"></textarea>
-            
-                <input type="hidden" name="possible_bot" value="true">
-            
-                <button type="submit" class="send-button">Send</button>
-            
-                <output id="error-message"></output>
-                <output id="info-message"></output>
-            </form>
-            
-        </section>
+      <form action="https://httpbin.org/post" method="POST" novalidate>
+        <label for="fullName"> Full Name: 
+            <span class="required">*</span>
+             <span id="fullNameError" class="error-inline"></span>
+        </label>
+        <input type="text" id="fullName" name="fullName" required
+               placeholder="Enter your full name">
+        
+        <label for="phoneNumber"> Phone: </label>
+        <input type="tel" id="phoneNumber" name="phoneNumber"
+               pattern="^[\\d\\s\\-\\(\\)]+$"
+               minlength="10" maxlength="23"
+               placeholder="Enter your phone number (optional)">
+        
+        <label for="email">Email: 
+            <span class="required">*</span>
+            <span id="emailError" class="error-inline"></span>
+        </label>
+        <input type="email" id="email" name="email" required
+               placeholder="Enter your email">
+               
+        <label for="message"> Message: 
+            <span class="required">*</span>
+            <span id="messageError" class="error-inline"></span>
+        </label>
+        <textarea id="message" name="message" rows="6"
+                  required minlength="10" maxlength="500"
+                  placeholder="Write me a message!"></textarea>
+        
+        <input type="hidden" name="possible_bot" value="true">
+        
+        <button type="submit" class="send-button">Send</button>
+        
+        <output id="error-message"></output>
+        <output id="info-message"></output>
+      </form>
+    </section>
 
-        <hr class="contactVerticalHr">
+    <hr class="contactVerticalHr">
 
-        <section class="recipientSide">
-            <div class="stamp">
-                <img src="images/airplaneStamp.png" alt="Paper Plane Stamp">
-            </div>
+    <section class="recipientSide">
+      <div class="stamp">
+        <img src="images/airplaneStamp.png" alt="Paper Plane Stamp">
+      </div>
+      <section class="address">
+        <p id="contactTo"><strong>To:</strong></p>
+        <p>Allison Nguyen</p>
+        <p>1512alli@gmail.com</p>
+        <p>Inbox Blvd, Let's Get in Touch, 0100</p>
+      </section>
+    </section>
+  </div>
 
-            <section class="address">
-                <p id="contactTo"><strong>To:</strong></p>
-                <p>Allison Nguyen</p>
-                <p>1512alli@gmail.com</p>
-                <p>Inbox Blvd, Let's Get in Touch, 0100</p>
-            </section>
-        </section>
-    </div>
+  <script>
 
+    let contactForm_errors = [];
+
+    function logFormError(field, message) {
+      const errorObj = {
+        field: field,
+        message: message,
+        timestamp: new Date().toISOString()
+      };
+      contactForm_errors.push(errorObj);
+    }
+
+    function displayError(msg) {
+      const errorOutput = document.getElementById("error-message");
+      errorOutput.textContent = msg;
+      setTimeout(() => {
+        clearError();
+      }, 
+      5000);
+    }
+
+    function clearError() {
+      document.getElementById("error-message").textContent = "";
+    }
+
+    function attachErrorLog() {
+      let hiddenField = document.querySelector("input[name='form-errors']");
+      if(!hiddenField){
+        hiddenField = document.createElement("input");
+        hiddenField.type = "hidden";
+        hiddenField.name = "form-errors";
+        contactForm.appendChild(hiddenField);
+      }
+      hiddenField.value = JSON.stringify(contactForm_errors);
+    }
+
+    // Full Name Validation & Checking 
+    const fullNameField = document.getElementById("fullName");
+    const fullNameError = document.getElementById("fullNameError");
+    const namePattern = /^[A-Za-z\s]*$/;
+    
+    fullNameField.addEventListener("input", function(){
+      const currentValue = fullNameField.value;
+      if (!namePattern.test(currentValue)) {
+        fullNameField.value = currentValue.slice(0, -1);
+        fullNameField.classList.add("flash-error");
+        fullNameError.textContent = "Improper character usage. Letters only.";
+        fullNameError.classList.add("visible");
+
+        logFormError("fullName", "Illegal character entered.");
+
+        setTimeout(() => {
+          fullNameField.classList.remove("flash-error");
+          fullNameError.textContent = "";
+          fullNameError.classList.remove("visible");
+        }, 
+        5000);
+      }
+    });
+
+    // Message Character Count Max + Min 
+    const messageField = document.getElementById("message");
+    const messageError = document.getElementById("messageError");
+    const infoOutput = document.getElementById("info-message");
+    const maxMessageLength = parseInt(messageField.getAttribute("maxlength"), 10);
+
+    messageField.addEventListener("input", function(){
+      const currentLength = messageField.value.length;
+      const charsRemaining = maxMessageLength - currentLength;
+      infoOutput.textContent = `${charsRemaining} characters remaining.`;
+      
+      if(charsRemaining < 10){
+        messageField.style.borderColor = "orange";
+      } 
+      else{
+        messageField.style.borderColor = "";
+      }
+
+      if(charsRemaining < 200){
+        infoOutput.style.color = "red";
+      }
+      else{
+        infoOutput.style.color = "blue";
+      }
+
+      if(charsRemaining < 0){
+        messageField.setCustomValidity("Message exceeds maximum allowed characters.");
+        messageField.classList.add("flash-error");
+        messageError.textContent = "Exceeded maximum characters!";
+        messageError.classList.add("visible");
+        logFormError("message", "Exceeded maximum characters.");
+      } 
+      else{
+        messageField.setCustomValidity("");
+        messageField.classList.remove("flash-error");
+        messageError.textContent = "";
+        messageError.classList.remove("visible");
+      }
+    });
+
+    // Checking each input box 
+    const contactForm = document.querySelector("form");
+    const emailField = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+
+    contactForm.addEventListener("submit", function(event){
+        
+        let hasError = false; 
+
+        // for Full Name Field
+        if(!fullNameField.value.trim()){
+            
+            logFormError("fullName", "Full name is required.");
+            fullNameField.classList.add("flash-error");
+            fullNameError.textContent = "Full name is required.";
+            fullNameError.classList.add("visible");
+            
+            setTimeout(() => {
+            fullNameField.classList.remove("flash-error");
+            fullNameError.textContent = "";
+            fullNameError.classList.remove("visible");
+            }, 
+            5000);
+
+            hasError = true;
+        }
+
+        // for Email Field
+        if(!emailField.value.trim() || !emailField.value.includes("@")){
+            logFormError("email", "Invalid email format.");
+            emailField.classList.add("flash-error");
+            emailError.textContent = "Invalid email format.";
+            emailError.classList.add("visible");
+            
+            setTimeout(() => {
+            emailField.classList.remove("flash-error");
+            emailError.textContent = "";
+            emailError.classList.remove("visible");
+            }, 
+            5000);
+            
+            hasError = true;
+        }
+
+        // Cfor checking the Message Char Counts
+        if(messageField.value.trim().length < 10){
+            logFormError("message", "Message too short.");
+            messageField.classList.add("flash-error");
+            messageError.textContent = "Message must be at least 10 characters.";
+            messageError.classList.add("visible");
+            
+            setTimeout(() => {
+            messageField.classList.remove("flash-error");
+            messageError.textContent = "";
+            messageError.classList.remove("visible");
+            }, 
+            5000);
+            
+            hasError = true;
+        }
+
+        if(hasError){
+            event.preventDefault();
+            displayError("Please fix errors to send the message");
+        } 
+        else{
+            attachErrorLog();
+        }
+    });
+
+  </script>
 </body>
 </html>
