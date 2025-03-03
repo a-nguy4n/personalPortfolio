@@ -1,0 +1,63 @@
+
+  [data-theme="dark"]{
+    --bg-color: #121212;         
+    --text-color: #e0e0e0;        
+    --title-color: #b0a5ff;     
+    --card-bg: #1e1e1e;         
+    --input-bg: #1e1e1e; 
+    --input-border: #999999;      
+    --required-color: #ff8080;    
+    --error-inline-color: #ff6666; 
+  }
+
+  :root{
+    --bg-color: #FFFAF2;         
+    --text-color: #333333;       
+    --title-color: #655CB3;       
+    --card-bg: #ffffff;           
+    --input-bg: #FAF8F8;          
+    --input-border: #333333;    
+    --required-color: red;        
+    --error-inline-color: rgb(187, 31, 31); 
+  }
+  
+  body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  #contactPageTitle{
+    color: var(--title-color);
+  }
+  
+  .contactPostcard{
+    background: var(--card-bg);
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    background: var(--input-bg);
+    border: 0.5px solid var(--input-border);
+  }
+  
+
+  .required{
+    color: var(--required-color);
+  }
+  
+  .error-inline{
+    color: var(--error-inline-color);
+  }
+  
+ 
+  [data-theme="dark"] .theme-wrapper{
+    filter: invert(1) hue-rotate(180deg);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  [data-theme="dark"] .theme-wrapper img{
+    filter: invert(1) hue-rotate(180deg);
+    transition: filter 0.3s ease-in-out;
+  }
+  

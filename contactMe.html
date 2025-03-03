@@ -5,65 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Me Page</title>
   <link rel="stylesheet" href="css/contactMe.css">
+  <link rel="stylesheet" href="css/lightDarkMode.css">
+
 </head>
 <body>
   <h1 id="contactPageTitle"> Write to Me!</h1>
+  <button id="themeToggle" class="toggle-button">Dark Mode</button>
 
-  <div class="contactPostcard">
-    <section class="contactForm">
+  <div class="theme-wrapper">
+    <div class="contactPostcard">
+        <section class="contactForm">
+    
+          <form action="https://httpbin.org/post" method="POST" novalidate>
+            <label for="fullName"> Full Name: 
+                <span class="required">*</span>
+                 <span id="fullNameError" class="error-inline"></span>
+            </label>
+            <input type="text" id="fullName" name="fullName" required
+                   placeholder="Enter your full name">
+            
+            <label for="phoneNumber"> Phone: </label>
+            <input type="tel" id="phoneNumber" name="phoneNumber"
+                   pattern="^[\\d\\s\\-\\(\\)]+$"
+                   minlength="10" maxlength="23"
+                   placeholder="Enter your phone number (optional)">
+            
+            <label for="email">Email: 
+                <span class="required">*</span>
+                <span id="emailError" class="error-inline"></span>
+            </label>
+            <input type="email" id="email" name="email" required
+                   placeholder="Enter your email">
+                   
+            <label for="message"> Message: 
+                <span class="required">*</span>
+                <span id="messageError" class="error-inline"></span>
+            </label>
+            <textarea id="message" name="message" rows="6"
+                      required minlength="10" maxlength="500"
+                      placeholder="Write me a message!"></textarea>
+            
+            <input type="hidden" name="possible_bot" value="true">
+            
+            <button type="submit" class="send-button">Send</button>
+            
+            <output id="error-message"></output>
+            <output id="info-message"></output>
+          </form>
+        </section>
+    
+        <hr class="contactVerticalHr">
+    
+        <section class="recipientSide">
+          <div class="stamp">
+            <img src="images/airplaneStamp.png" alt="Paper Plane Stamp">
+          </div>
+          <section class="address">
+            <p id="contactTo"><strong>To:</strong></p>
+            <p>Allison Nguyen</p>
+            <p>1512alli@gmail.com</p>
+            <p>Inbox Blvd, Let's Get in Touch, 0100</p>
+          </section>
+        </section>
 
-      <form action="https://httpbin.org/post" method="POST" novalidate>
-        <label for="fullName"> Full Name: 
-            <span class="required">*</span>
-             <span id="fullNameError" class="error-inline"></span>
-        </label>
-        <input type="text" id="fullName" name="fullName" required
-               placeholder="Enter your full name">
-        
-        <label for="phoneNumber"> Phone: </label>
-        <input type="tel" id="phoneNumber" name="phoneNumber"
-               pattern="^[\\d\\s\\-\\(\\)]+$"
-               minlength="10" maxlength="23"
-               placeholder="Enter your phone number (optional)">
-        
-        <label for="email">Email: 
-            <span class="required">*</span>
-            <span id="emailError" class="error-inline"></span>
-        </label>
-        <input type="email" id="email" name="email" required
-               placeholder="Enter your email">
-               
-        <label for="message"> Message: 
-            <span class="required">*</span>
-            <span id="messageError" class="error-inline"></span>
-        </label>
-        <textarea id="message" name="message" rows="6"
-                  required minlength="10" maxlength="500"
-                  placeholder="Write me a message!"></textarea>
-        
-        <input type="hidden" name="possible_bot" value="true">
-        
-        <button type="submit" class="send-button">Send</button>
-        
-        <output id="error-message"></output>
-        <output id="info-message"></output>
-      </form>
-    </section>
-
-    <hr class="contactVerticalHr">
-
-    <section class="recipientSide">
-      <div class="stamp">
-        <img src="images/airplaneStamp.png" alt="Paper Plane Stamp">
       </div>
-      <section class="address">
-        <p id="contactTo"><strong>To:</strong></p>
-        <p>Allison Nguyen</p>
-        <p>1512alli@gmail.com</p>
-        <p>Inbox Blvd, Let's Get in Touch, 0100</p>
-      </section>
-    </section>
-  </div>
+</div>
+  
 
   <script>
 
@@ -210,7 +217,7 @@
             hasError = true;
         }
 
-        // Cfor checking the Message Char Counts
+        // for checking the Message Char Counts
         if(messageField.value.trim().length < 10){
             logFormError("message", "Message too short.");
             messageField.classList.add("flash-error");
@@ -235,7 +242,9 @@
             attachErrorLog();
         }
     });
-
   </script>
+
+  <script src="js/modeThemeToggle.js"></script>
+
 </body>
 </html>
