@@ -16,8 +16,8 @@ body{
 .resumeHeaders{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 5%;
 }
 
  #resumePageTitle{
@@ -42,7 +42,7 @@ body{
 main{
     width: 90%;
     margin: auto;
-    max-width: 900px;
+    max-width: 1000px;
     display: block;
     margin-top: 5%;
 }
@@ -55,6 +55,7 @@ main{
     grid-template-columns: 15% 70%;
     align-items: start; 
     column-gap: 5%;
+    margin-bottom: 2%;
 }
 
 h2{
@@ -65,13 +66,14 @@ h2{
 }
 
 .educationContent,
-.experienceContent{
+.experienceContent,
+.projectsContent,
+.skillsContent{
     font-size: 1.1vw;
 }
 
 i{
     font-size: 1vw;
-
 }
 
 #college,
@@ -120,66 +122,8 @@ ul{
     margin-bottom: 1.5%;
 }
 
-/* h3 {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-    color: #666;
-} */
-
-/* p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-} */
-
-
-/* 
-strong {
-    font-size: 1.2rem;
-} */
-
-
-
-/* ol {
-    list-style-type: none;
-    padding: 0;
+.skillsContent{
+    margin-top: 1.75%;
 }
 
-ol li {
-    margin-bottom: 1.5rem;
-}  */
 
-/* 
-i {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #444;
-} */
-
-/* .experienceSection p,
-.projectsSection p {
-    font-size: 1rem;
-    margin-left: 1rem;
-} */
-
-/* @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    ul {
-        flex-direction: column;
-    }
-
-    ul li {
-        width: auto;
-        padding: 5px 10px;
-    }
-} */
