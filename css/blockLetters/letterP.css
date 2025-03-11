@@ -1,0 +1,29 @@
+body{
+    background-color: #FFF6E8; /* Light postcard background */
+    display: flex;
+    flex-direction: column; /* Stack grid and letters */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+}
+
+.landscapeGrids{
+    display: grid;
+    grid-template-columns: repeat(3, 310px); 
+    grid-template-rows: repeat(3, 230px); 
+    gap: 25px;
+}
+
+.frame{
+    border: 1px solid black;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: "Verdana", sans-serif;
+    font-size: 17rem;
+    font-weight: bolder;
+}
+
+

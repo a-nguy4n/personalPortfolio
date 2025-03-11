@@ -1,124 +1,167 @@
 @font-face{
-    font-family: "Finger Paint";
-    src: url("/fonts/FingerPaint-Regular.ttf") format("truetype");
-    font-weight: 400; 
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
 }
 
 body{
     background-color: #FFFAF2;
-    margin: 0;
-}
-
-/* -------- General Page Styling -------- */
-body {
-    background-color: #FFFAF2;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Roboto Mono';
     font-weight: light;
-    color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     width: 100vw;
     overflow-x: hidden;
 }
 
-#resumePageTitle{
-    font-size: 2.5rem;
-    color: #D268AC;
-    text-align: start;
-    font-family: 'Finger Paint', sans-serif;
-    margin-top: 2rem;
-    margin-left: 2rem;
+.resumeHeaders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ #resumePageTitle{
+    font-size: 3vw;
+    color: #D268AC; 
+    font-weight: 600;
+    margin-bottom: 1%;
 }
 
 #resumeDoc{
     display: block;
     text-align: start;
-    font-size: 1.2rem;
+    font-size: 1vw;
     color: black;
     text-decoration: none;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
 }
 
 #resumeDoc:hover {
     color: #1f38d6;
-}
+} 
 
 main{
-    width: 85%;
+    width: 90%;
     margin: auto;
     max-width: 900px;
+    display: block;
+    margin-top: 5%;
 }
 
-h2 {
-    font-size: 1.8rem;
+.educationSection, 
+.experienceSection,
+.projectsSection,
+.skillsSection{
+    display: grid;
+    grid-template-columns: 15% 70%;
+    align-items: start; 
+    column-gap: 5%;
+}
+
+h2{
+    font-size: 1.1vw;
     color: #070606;
-    border-bottom: 2px solid #D268AC;
-    padding-bottom: 5px;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: left;
 }
 
-h3 {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-    color: #666;
+.educationContent,
+.experienceContent{
+    font-size: 1.1vw;
 }
 
-p {
-    font-size: 1.1rem;
-    margin: 5px 0;
+i{
+    font-size: 1vw;
+
 }
 
-address {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: light;
-    font-size: 1.2rem;
-    font-style: normal;
+#college,
+summary{
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-strong {
-    font-size: 1.2rem;
+#gradDate,
+#experienceDate,
+#experienceLoc,
+#projectsDate{
+    font-size: 0.85vw;
+    color: rgb(100, 98, 98);
+    margin-top: 0.5%;
+    margin-bottom: 0;
 }
 
-ul {
+ul{
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
+} 
 
-ul li {
+#coursework li,
+#programmingLang li,
+#tools li,
+#spokenLang li{
     background-color: #EAEAEA;
-    padding: 8px 12px;
+    padding: 5px 8px;
     border-radius: 15px;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.8vw;
 }
 
-ol {
+.bulletList {
+    margin-top: 0.2rem; 
+    padding-left: 1.5rem;
+    font-size: 0.95vw;
+    list-style-type: disc;
+}
+
+#expOne,
+#expTwo{
+    margin-bottom: 1.5%;
+}
+
+/* h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #666;
+} */
+
+/* p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+} */
+
+
+/* 
+strong {
+    font-size: 1.2rem;
+} */
+
+
+
+/* ol {
     list-style-type: none;
     padding: 0;
 }
 
 ol li {
     margin-bottom: 1.5rem;
-}
+}  */
 
+/* 
 i {
     font-size: 1.2rem;
     font-weight: bold;
     color: #444;
-}
+} */
 
-.experienceSection p,
+/* .experienceSection p,
 .projectsSection p {
     font-size: 1rem;
     margin-left: 1rem;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
@@ -139,4 +182,4 @@ i {
         width: auto;
         padding: 5px 10px;
     }
-}
+} */

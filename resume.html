@@ -10,145 +10,152 @@
 
 <body>
 <div class="theme-wrapper">
-    <h1 id="resumePageTitle"> My Resume </h1>
-    <button id="themeToggle" class="toggle-button">Dark Mode</button>
 
-    <a href="assets/myResume.pdf" target="_blank" id="resumeDoc">My Standard Resume (PDF)</a>
+    <div class="resumeHeaders">
+        <h1 id="resumePageTitle"> My Resume </h1> 
+        <a href="assets/myResume.pdf" target="_blank" id="resumeDoc"> 🔗 Standard Resume (PDF)</a>
+    </div>
+   
+    <!-- <button id="themeToggle" class="toggle-button">Dark Mode</button> -->
 
     <main>
         <section class="educationSection">
             <h2> Education </h2>
-            <address> University of California, San Diego (UCSD) </address>
-            <p> 
-                <strong>  Bachelor of Science - Computer Engineering 
-                          <br>
-                          Design Minor
-                </strong>
-            </p>
-            <p> Expected: <time datetime="2026-06">June 2026</time> </p>
-    
-        
-                <summary>Relevant Coursework</summary>
-                <ul>
-                    <li>Advanced Data Structures</li>
-                    <li>Circuits and Systems</li>
-                    <li>Computer Organization & Systems</li>
-                    <li>Design & Analysis of Algorithm</li>
-                    <li>Design of Everyday Things</li>
-                    <li>Product Engineering</li>
-                    <li>Software Engineering</li>
-                    <li>Software Tools & Techniques Lab</li>
-                    <li>Web Client Languages</li>
-                </ul>
-   
+            <section class="educationContent">
+                <p id="college"> University of California, San Diego (UCSD) </p> 
+                <p id="gradDate"> Expected <time datetime="2026-06">June 2026</time> </p>
+                <p id="degree"> 
+                    Bachelor of Science - Computer Engineering 
+                    <br>
+                    Design Minor
+                </p>
+              
+                    <summary>Relevant Coursework</summary>
+                    <ul id="coursework">
+                        <li>Advanced Data Structures</li>
+                        <li>Circuits and Systems</li>
+                        <li>Computer Organization & Systems</li>
+                        <li>Design & Analysis of Algorithm</li>
+                        <li>Design of Everyday Things</li>
+                        <li>Product Engineering</li>
+                        <li>Software Engineering</li>
+                        <li>Software Tools & Techniques Lab</li>
+                        <li>Web Client Languages</li>
+                    </ul>
+            </section>
         </section>
-    
+
         <section class="experienceSection">
             <h2> Experience </h2>
-    
-            <ol>
-                <li> <i> UCSD Guided Engineering Apprenticeship in Research (GEAR Program) </i> 
-                    <p> When: October 2023 - June 2024</p>
-                    <p>Position: Student Researcher</p>
-                    <p> About: </p>
-                        <ul>
-                            <li> Designed and developed an iOS app in Swift for ophthalmology professionals 
-                                 to streamline eye health diagnostics.  
-                            </li>
-    
-                            <li>Collaborated with a PhD mentor, authored a research proposal, and delivered 
-                                a presentation showcasing advancements in mobile health technologies for 
-                                accessible patient care.
-                            </li>
-                        </ul>
-              
-                </li>
-    
-                <li> <i> UCSD Mentor Collective </i> 
-                    <p> When: October 2023 - June 2024</p>
-                    <p>Position: Mentor</p>
-                    <p> About:</p>
-                        <ul>
-                            <li> Mentored college freshmen and transfer students to support their personal 
-                                 and professional growth by fostering a positive and healthy environment.
-                            </li>
-    
-                            <li>Provided guidance on time management, work-life balance, and career planning 
-                                while sharing campus and personal resources to help mentees thrive socially 
-                                and mentally.
-                            </li>
-    
-                            <li>Logged conversations to track progress and researched opportunities to 
-                                encourage community engagement, friendships, and career development.
-                            </li>
-                        </ul>
-                </li>    
-            </ol>
+            <section class="experienceContent">
+                <ul id="experiences">
+                    <li id="expOne"> <b> UCSD Guided Engineering Apprenticeship in Research (GEAR Program)</b>
+                        <p id="experienceLoc"> University of California, San Diego</p>
+                        <p id="experienceDate"> October 2023 - June 2024</p>
+                        <p> <i> Student Researcher </i></p>
+                            <ul class="bulletList">
+                                <li> Designed and developed an iOS app in Swift for ophthalmology professionals 
+                                     to streamline eye health diagnostics.  
+                                </li>
+        
+                                <li>Collaborated with a PhD mentor, authored a research proposal, and delivered 
+                                    a presentation showcasing advancements in mobile health technologies for 
+                                    accessible patient care.
+                                </li>
+                            </ul>
+                    </li>
+        
+                    <li id="expTwo"> <b> UCSD Mentor Collective </b> 
+                        <p id="experienceLoc"> University of California, San Diego</p>
+                        <p id="experienceDate"> October 2023 - June 2024</p>
+                        <p> <i>Student Mentor</i></p>
+                            <ul class="bulletList">
+                                <li> Mentored college freshmen and transfer students to support their personal 
+                                     and professional growth by fostering a positive and healthy environment.
+                                </li>
+        
+                                <li>Provided guidance on time management, work-life balance, and career planning 
+                                    while sharing campus and personal resources to help mentees thrive socially 
+                                    and mentally.
+                                </li>
+        
+                                <li>Logged conversations to track progress and researched opportunities to 
+                                    encourage community engagement, friendships, and career development.
+                                </li>
+                            </ul>
+                    </li>    
+                </ul>
+            </section>
         </section>
- 
+        
         <section class="projectsSection">
             <h2> Projects </h2>
-            <ol>
-                <li> <i> SoCal Social Web App </i>
-                    <p> When:  October 2024 - December 2024</p>
-                    <p> About:</p>
-                    <ul>
-                        <li> Developed and refined features for the SoCalSocial web application using React, 
-                            Node.js,and CSS, focusing on frontend development, state management, and backend 
-                            integration. 
-                        </li>
-    
-                        <li> Created an interactive "Demo" tool and dynamic positioning, and designed the "Events 
-                            List" and "Club Search" pages with efficient grouping, filtering, and search 
-                            functionality.
-                        </li>
-    
-                        <li>
-                            Optimized layouts for the "Add Event Page," "Edit Event Page," and "Detailed Club Page," 
-                            addressing challenges like async data handling and responsive design to enhance usability 
-                            and performance.
-                        </li>
-                    </ul>
-                </li>
-            </ol>
+            <section class="projectsContent">
+                <ul id="projectsList">
+                    <li id="projectOne"> <b> SoCal Social Web App </b> 
+                        <p id="projectsDate"> October 2024 - December 2024</p>
+                        <p> <i> Fullstack Web Application </i></p>
+                        <ul class="bulletList">
+                            <li> Developed and refined features for the SoCalSocial web application using React, 
+                                Node.js,and CSS, focusing on frontend development, state management, and backend 
+                                integration. 
+                            </li>
+        
+                            <li> Created an interactive "Demo" tool and dynamic positioning, and designed the "Events 
+                                List" and "Club Search" pages with efficient grouping, filtering, and search 
+                                functionality.
+                            </li>
+        
+                            <li>
+                                Optimized layouts for the "Add Event Page," "Edit Event Page," and "Detailed Club Page," 
+                                addressing challenges like async data handling and responsive design to enhance usability 
+                                and performance.
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+            </section>
         </section>
 
         <section class="skillsSection">
             <h2> Skills </h2>
-                <h3> Programming Languages & Frameworks </h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>Swift</li>
-                        <li>Assembly</li>
-                    </ul>
-                <br>
-                <h3> Tools & Software </h3>
-                    <ul>
-                        <li>GitHub</li>
-                        <li>TinkerCad</li>
-                        <li>Excel</li>
-                        <li>MatLab</li>
-                        <li>Xcode</li>
-                        <li>Figma</li>
-                        <li>Visual Studio Code</li>
-                        <li>GDB</li>
-                    </ul>
-                <br>
-                <h3> Spoken Languages</h3>
-                    <ul>
-                        <li> English </li>
-                        <li> Vietnamese </li>
-                        <li> Spanish</li>
-                    </ul>
+            <section class="skillsContent">
+                <summary> Programming Languages & Frameworks </summary>
+                <ul id="programmingLang">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Swift</li>
+                    <li>Assembly</li>
+                </ul>
+            <br>
+            <summary> Tools & Software </summary>
+                <ul id="tools">
+                    <li>GitHub</li>
+                    <li>TinkerCad</li>
+                    <li>Excel</li>
+                    <li>MatLab</li>
+                    <li>Xcode</li>
+                    <li>Figma</li>
+                    <li>Visual Studio Code</li>
+                    <li>GDB</li>
+                </ul>
+            <br>
+            <summary> Spoken Languages</summary>
+                <ul id="spokenLang">
+                    <li> English </li>
+                    <li> Vietnamese </li>
+                    <li> Spanish</li>
+                </ul>
+            </section>
+               
         </section>
     </main>
 </div>
