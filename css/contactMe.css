@@ -6,6 +6,11 @@
     font-display: swap;
 }
 
+@font-face{
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
 body{
     background-color: #FFFAF2;
     margin: 0;
@@ -19,6 +24,7 @@ body{
     font-weight: 600;
     margin-top: 3%;
     margin-left: 3%;
+    font-family: "Roboto Mono";
 }
 
 .contactPostcard{
@@ -52,8 +58,8 @@ body{
     margin-bottom: 3%;
     border: 0.5px solid #333;
     border-radius: 5px;
-    font-size: 1.3vw;
-    font-family: 'Nunito', sans-serif;
+    font-size: 1vw;
+    font-family: 'Roboto Mono';
     background: #FAF8F8;
     outline: none;
 }

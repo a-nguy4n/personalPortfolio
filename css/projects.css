@@ -1,40 +1,232 @@
-body {
+@font-face{
+    font-family: "Roboto Mono";
+    src: url("/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+body{
     background-color: #FFF6E8;
     font-family: 'Work Sans', sans-serif;
     margin: 0;
-    padding: 0;
-    text-align: center;
+    padding: 0; 
+    overflow-y: auto;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #D268AC;
-    margin-bottom: 20px;
+.projectHeaders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1%;
 }
+
+h1{
+    font-size: 3vw;
+    color: #90C28B;
+    font-family: "Roboto Mono";
+}
+
+h2{
+    font-size: 1.3vw;
+    color: #90C28B;
+    margin-bottom: 5%;
+    font-family: "Roboto Mono";
+    font-weight: 200;
+}
+
+/* .projects-container{
+    display:flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 150vh;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+.proj-postcard{
+    background-color: rgba(185, 185, 185, 0.462);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 2%;
+} */
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 80%;
-    max-width: 900px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: minmax(5, auto); 
+    gap: 2%; 
+    width: 90vw;
     margin: auto;
+    padding: 10px;
 }
 
-.project {
+.proj-postcard {
+    background-color: rgba(185, 185, 185, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 4%;
+}
+
+#projectCard-1{ 
+    grid-column: span 3; 
+    grid-row: 32 / span 50; 
+    aspect-ratio: 16 / 9; 
+}
+
+#projectCard-2{ 
+    grid-column: span 3; 
+    grid-row: span 75;
+}
+
+#projectCard-3{ 
+    grid-column: span 4; 
+    grid-row: span 55;
+}
+
+#projectCard-4{ 
+    grid-column: span 4; 
+    grid-row: span 55;
+}
+
+#projectCard-5{ 
+    grid-column: 2 / span 5; 
+    grid-row: 82 / span 70;
+}
+
+#projectCard-6{ 
+    grid-column: span 3; 
+    grid-row: span 82;
+}
+
+#projectCard-7{ 
+    grid-column: span 3; 
+    grid-row: span 50;
+}
+
+#projectCard-8{ 
+    grid-column: span 3; 
+    grid-row: span 82;
+}
+
+#projectCard-9{ 
+    visibility: hidden;
+    grid-column: span 10; 
+    grid-row: span 20;
+}
+
+
+
+
+
+
+/* #projectCard-1{
+    width: 10%; 
+    height: 21%; 
+}  */
+
+/* #projectCard-2{
+    width: 25%; 
+    height: 30%; 
+} */
+
+/* #projectCard-3{
+    width: 38%; 
+    height: 24%; 
+} */
+
+/* #projectCard-4{
+    width: 38%; 
+    height: 24%; 
+} */
+
+/* #projectCard-3{width: 22%; height: 42%; }  */
+/* #projectCard-4 { width: 46%; height: 20%; }
+#projectCard-5 { width: 46%; height: 20%; } 
+#projectCard-6 { width: 70%; height: 20%; } 
+#projectCard-7 { width: 22%; height: 20%; } 
+#projectCard-8 { width: 22%; height: 42%; }  */
+
+/* #projectCard-1{
+    position: absolute;
+    width: 26%;
+    height: 31%;
+    top: 2%;
+    left: 1%;
+}
+
+#projectCard-2{
+    position: absolute;
+    width: 28%;
+    height: 57%;
+    top: 9%;
+    left: 29%;
+}
+
+#projectCard-3{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 4%;
+    right: 1%;
+}
+
+#projectCard-4{
+    position: absolute;
+    width: 26%;
+    height: 31%;
+    top: 36%;
+    left: 1%;
+}
+
+#projectCard-5{
+    position: absolute;
+    width: 49%;
+    height: 40%;
+    top: 70%;
+    left: 7%;
+}
+
+#projectCard-6{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 48%;
+    right: 1%;
+}
+
+#projectCard-7{
+    position: absolute;
+    width: 33%;
+    height: 35%;
+    top: 113%;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* .project{
     background: white;
     border: 3px solid #D268AC;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-}
+} */
 
-.project:hover {
+/* .project:hover{
     transform: scale(1.05);
 }
 
-.project iframe {
+.project iframe{
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -46,4 +238,4 @@ h1 {
     color: #D268AC;
     font-weight: bold;
     padding: 40px;
-}
+} */
