@@ -1,0 +1,131 @@
+
+@font-face{
+    font-family: "Marck Script";
+    src: url("../assets/fonts/MarckScript-Regular.woff2") format("woff2"),
+         url("../assets/fonts/MarckScript-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "Inconsolata";
+    src: url("../assets/fonts/Inconsolata-VariableFont.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: #FFFAF2;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.landingPageContainer{
+    /* background-color: #FFF6E8; */
+    width: 94vw;
+    height: 94vw;
+    margin: auto;
+    margin-top: 3%;
+    margin-left: 3%;
+    display: inline-block;
+    position: relative;
+}
+
+.innerCardColor{
+    background-color: #FFF6E8;
+    max-height: 90vh;
+}
+
+#landingHeaders{
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    width: fit-content;
+    max-height: 15%;
+    margin-left: 2%;
+}
+
+.header-col{
+    display: flex; 
+    flex-direction: column;
+}
+
+#greetings,
+#from-my{
+    font-family: "Marck Script", cursive;
+}
+
+#greetings{
+    font-size: 6vw;
+    font-weight: 400;
+    color: #FDC240;
+    /* text-shadow: 0.20vw 0.15vw 0vw black;  */
+    text-shadow: 0.25vw 0.25vw 0vw black; 
+    transform: translateY(-4vw);   
+}
+
+#from-my{
+    font-size: 3.3vw;
+    white-space: nowrap;
+    align-self: center;
+    transform: translateY(-10vw);
+}
+
+.post-position{
+   margin-left: 4%;
+   transform: translateY(-9vw);
+}
+
+.bottomRow{
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    width: fit-content;
+    height: auto;
+    margin: 0 0 0 12%;
+    transform: translateY(-10vw);
+}
+
+.mailbox-container{
+    display: flex;
+    margin-left: 0 0 0 10%;
+    left: 12%;
+    width: 10vw;
+}
+
+.tagLineText{
+    display: flex;
+    width: 67vw;
+    margin-left: 15%;
+    transform: translateY(-5vw);
+}
+
+#landingTagLine{
+    font-family: "Inconsolata", serif;
+    font-size: 2vw;
+    line-height: 1.5;
+    color: #333;
+    text-align: left; 
+}
+
+[data-color="olive"] {
+    color: #769573;
+}
+
+[data-color="mulberry"] {
+    color: #C3628F;
+}
+
+[data-color="teal"] {
+    color: #079895;
+}
+
+[data-color="crimson"] {
+    color: #B0081F;
+}
+

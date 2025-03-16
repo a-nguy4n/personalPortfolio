@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en"> 
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Landing Page </title>
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/postfolioTitle.css">
+    <link rel="stylesheet" href="css/mailbox.css">
+    <title> Landing Page</title>
 </head>
+
 <body>
+    <div class="landingPageContainer">
+        <div class="innerCardColor">
+            <section id="landingHeaders"> 
+                <div class="header-col">
+                    <h1 id="greetings"> Greetings </h1> 
+                    <h1 id="from-my"> from my </h1> 
+                </div>
+                <h1 class="post-position" id="postfolio-title"> POSTFOLIO </h1>
+            </section>
     
+            <div class="bottomRow">
+            
+               <div class="mailbox-container">
+                       <div class="mailbox">
+                           <div class="box">
+                               <div class="lid"></div>
+                               <div class="side-opening"></div>
+                               <div class="flag"></div>
+                               <button class="letter" onclick="window.location.href='home.html'"> HOME </button>
+                           </div>
+                           <div class="pole"></div>
+                           <div class="grass-flatpatch"></div>
+                           <div class="grass-patchOne">
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                           </div>
+       
+                           <div class="grass-patchTwo">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div>
+                   
+                           <div class="grass-patchThree">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div>
+                   
+                           <div class="grass-patchFour">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div> 
+                       </div>
+                   </div>
+    
+                    <section class="tagLineText">
+                        <p id="landingTagLine"> 
+                        A collection of my works as a <span data-color="olive">computer engineer</span> 
+                        and <span data-color="mulberry">designer</span> turning ideas into 
+                        <span data-color="teal">innovative, human-centered</span> solutions. 
+                        <br>
+                        <br>
+                        Feel free to explore my work and learn about creative process. 
+                        </p>
+                    </section>
+               </div>
+        </div>
+    </div>
+
+    <div id="home-page"></div>
+
+    <script>
+        // Load second HTML when scrolling near the bottom
+        window.addEventListener('scroll', function () {
+            let scrollPosition = window.innerHeight + window.scrollY;
+            let pageHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition >= pageHeight - 100) { // Near bottom
+                fetch('home.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('home-page').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+        });
+    </script>
+
+
 </body>
 </html>

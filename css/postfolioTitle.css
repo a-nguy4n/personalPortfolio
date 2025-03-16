@@ -1,0 +1,30 @@
+@font-face{
+    font-family: "Fira Sans";
+    src: url("/assets/fonts/FiraSans-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+#postfolio-title{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: "Fira Sans";
+    font-size: 13vw;
+    font-weight: bolder;
+    
+    /* background: linear-gradient(#558fd2e4, #5fa4e1bc, #6ab9f1c2); */
+    background: url('/assets/images/sky.png'), repeat-x;
+    background-size: 50% auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px #70a8e8e6; 
+    
+    animation: movingClouds 6s infinite linear; 
+}
+
+@keyframes movingClouds{
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}

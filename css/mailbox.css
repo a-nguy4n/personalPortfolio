@@ -1,0 +1,192 @@
+.mailbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    width: 11vw;
+    height: 6vw;
+    background-color: #c03d2e; 
+    border-radius: 2.5vw 2.5vw 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lid{
+    position: absolute;
+    width: 3.9vw;
+    height: 6.5vw;
+    background-color: #c03d2e; 
+    border-radius: 2.5vw 2.5vw 0px 0px;
+    bottom: -5vw;
+    right: -0.45vw;
+    transform: rotate(163deg);
+}
+
+.side-opening{
+    position: absolute;
+    width: 4vw;
+    height: 6vw;
+    background-color: #7a2219;
+    border-radius: 2.5vw 2.5vw 0px 0px;
+    right: 0vw;
+}
+
+.flag{
+    position: absolute;
+    top: -2vw; 
+    right: 7vw;
+    width: 0.3vw; 
+    height: 2vw; 
+    background: #f1c40f;
+}
+
+.flag::before{
+    content: "";
+    position: absolute;
+    width: 1.5vw; 
+    height: 1vw; 
+    background:#f1c40f;
+    top: 0vw;
+    left: -1.2vw;
+}
+
+.pole{
+    width: 0.9vw;
+    height: 8vw;
+    background-color: #895835; 
+}
+
+.grass-flatpatch{
+    width: 7vw;
+    height: 1vw;
+    background-color: #549d54; 
+    border-radius: 50%;
+    position: relative;
+}
+
+@font-face{
+    font-family: "Finger Paint";
+    src: url("../assets/fonts/FingerPaint-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+
+.letter{
+    position: absolute;
+    width: 6vw;
+    height: 4vw;
+    background-color: #47b4b2; 
+    border: 1px solid #069593;
+    border-radius: 5px;
+    top: 1.3vw;
+    right: -3vw;
+    transform: rotate(10deg);
+    cursor: pointer;
+    transition: transform 0.3s ease, top 0.3s ease;
+
+    font-family: "Finger Paint";
+    color: white;
+    font-size: 1.6vw;
+
+    animation: wiggleLetter 1s infinite ease-in-out;
+}
+
+.letter:hover{
+    top: 0px;
+    transform: rotate(10deg) scale(1.1);
+    background-color: #079895; 
+   
+}
+
+@keyframes wiggleLetter{
+    0% { transform: rotate(9deg) translateX(0); }
+    25% { transform: rotate(12deg) translateX(2px); }
+    50% { transform: rotate(8deg) translateX(0); }
+    75% { transform: rotate(5deg) translateX(-2px); }
+    100% { transform: rotate(9deg) translateX(0); }
+}
+
+.grassblade-typeOne{
+    width: 0.35vw;
+    height: 3vw;
+    background: linear-gradient(to top, #216d21, #549d54); 
+    border-radius: 50% 50% 0 0; 
+    animation: sway 3s ease-in-out infinite alternate;
+    transform-origin: bottom center; 
+}
+
+.grassblade-typeTwo{
+    width: 0.35vw;
+    height: 2.2vw;
+    background: linear-gradient(to top, #216d21, #549d54); 
+    border-radius: 50% 50% 0 0; 
+    animation: sway 3s ease-in-out infinite alternate;
+    transform-origin: bottom center; 
+}
+
+.grass-patchOne{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.5vh;
+}
+
+.grass-patchTwo{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.5vh;
+    left: 10vw;
+}
+
+.grass-patchThree{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.6vh;
+    right: 3vw;
+}
+
+.grass-patchFour{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.6vh;
+    right: 10vw;
+}
+
+@keyframes sway{
+    0% {
+        transform: rotate(-10deg) skewX(-5deg);
+    }
+    100% {
+        transform: rotate(10deg) skewX(5deg);
+    }
+}
+
+.grassblade:nth-child(odd){
+    animation-duration: 3.8s; 
+    animation-delay: -0.5s;
+}
+.grassblade:nth-child(even){
+    animation-duration: 4.2s;
+    animation-delay: -1s;
+}
+
+
