@@ -63,6 +63,7 @@ h2{
     color: #070606;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 5%;
 }
 
 .educationContent,
@@ -110,7 +111,7 @@ ul{
     font-size: 0.8vw;
 }
 
-.bulletList {
+.bulletList{
     margin-top: 0.2rem; 
     padding-left: 1.5rem;
     font-size: 0.95vw;
@@ -127,3 +128,60 @@ ul{
 }
 
 
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 5vw;
+    }
+
+    #resumePageTitle{
+        font-size: 8vw;
+    }
+
+    #resumeDoc{
+        font-size: 4vw;
+    }
+
+    h2{
+        font-size: 5vw;
+    }
+
+    .educationContent,
+    .experienceContent,
+    .projectsContent{
+        font-size: 4.5vw; 
+        margin-top: 15%;
+    }
+
+    .skillsContent{
+        font-size: 4.5vw; 
+        margin-top: 20%;
+    }
+
+    i{
+        font-size: 3.5vw;
+    }
+
+    #college,
+    summary{
+        font-size: 4.2vw;
+    }
+
+    #gradDate,
+    #experienceDate,
+    #experienceLoc,
+    #projectsDate{
+        font-size: 3vw;
+    }
+
+    #coursework li,
+    #programmingLang li,
+    #tools li,
+    #spokenLang li{
+        font-size: 3vw;
+        padding: 10px 14px; 
+    }
+
+    .bulletList{
+        font-size: 3.5vw;
+    }
+}
