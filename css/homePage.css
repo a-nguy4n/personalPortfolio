@@ -40,20 +40,20 @@ body{
     font-family: "Inconsolata", serif;
     margin-left: 2%;
     line-height: 0.5;
-    font-size: 1rem;
+    font-size: 1.2vw;
 }
 
 #myName{
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.3vw;
 }
 
 #homeCardTitle{
     order: 2;
     font-family: "Finger Paint";
     color: #079895;
-    font-size: 2.5rem;
-    transform: translateX(-2vw);
+    font-size: 3vw;
+    transform: translateX(-2.8vw);
 }
 
 .home-stamp{
@@ -76,7 +76,7 @@ body{
 
 #homeStampSquiggle{
     width: 15vw;
-    transform: rotate(-4deg) translateY(1%);
+    transform: rotate(-4deg) translateY(3%);
     z-index: 2;  
     position: absolute;
     right: 7vw;
@@ -99,7 +99,7 @@ body{
 }
 
 .sectionHeaders{
-    font-size: 4vh;
+    font-size: 2vw;
     font-family: "Inconsolata";
 }
 
@@ -110,11 +110,11 @@ body{
 
 #about-description{
     font-family: "Inconsolata", serif;
-    font-weight: 300;
-    font-size: 1.1rem;
+    font-weight: 350;
+    font-size: 1.2vw;
 }
 
-.vertical-hr {
+.vertical-hr{
     order: 2;
     border-left: 1px solid black; 
     height: auto;
@@ -139,7 +139,7 @@ body{
     text-decoration: none;
     color: black;
     font-family: "Gaegu";
-    font-size: 1.80rem;
+    font-size: 2vw;
     text-align: center;
     display: block; 
     border-bottom: 1px solid black; 
