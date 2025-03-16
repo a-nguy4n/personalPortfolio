@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/postfolioTitle.css">
     <link rel="stylesheet" href="css/mailbox.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> Landing Page</title>
 </head>
 
@@ -81,26 +84,5 @@
                </div>
         </div>
     </div>
-
-    <div id="home-page"></div>
-
-    <script>
-        // Load second HTML when scrolling near the bottom
-        window.addEventListener('scroll', function () {
-            let scrollPosition = window.innerHeight + window.scrollY;
-            let pageHeight = document.documentElement.scrollHeight;
-
-            if (scrollPosition >= pageHeight - 100) { // Near bottom
-                fetch('home.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('home-page').innerHTML = data;
-                    })
-                    .catch(error => console.error('Error loading content:', error));
-            }
-        });
-    </script>
-
-
 </body>
 </html>

@@ -189,4 +189,77 @@
     animation-delay: -1s;
 }
 
+/* PHONES: PORTRAIT MODE */
+@media screen and (max-width: 430px) {
+    .mailbox{
+        transform: scale(1.5); 
+    }
 
+    .box{
+        width: 18vw;
+        height: 10vw;
+        border-radius: 4vw 4vw 5px 5px;
+    }
+
+    .lid{
+        width: 7vw;
+        height: 10vw;
+        bottom: -7vw;
+        right: -1vw;
+        border-radius: 3vw 3vw 0px 0px;
+    }
+
+    .side-opening{
+        width: 7vw;
+        height: 10vw;
+        border-radius: 3vw 3vw 0px 0px;
+    }
+
+    .flag{
+        top: -4vw;
+        right: 10vw;
+        width: 0.5vw;
+        height: 3vw;
+    }
+
+    .flag::before{
+        width: 2.5vw;
+        height: 1.5vw;
+        top: 0vw;
+        left: -2vw;
+    }
+
+    .pole {
+        width: 1.5vw;
+        height: 12vw;
+    }
+
+    .letter{
+        width: 9vw;
+        height: 6vw;
+        font-size: 2vw;
+        top: 2vw;
+        right: -5vw;
+        border-radius: 8px;
+        transform: rotate(10deg);
+        animation: wiggleLetter 1s infinite ease-in-out;
+    }
+
+    .grass-flatpatch {
+        width: 12vw;
+        height: 2vw;
+    }
+
+    .grassblade-typeOne,
+    .grassblade-typeTwo{
+        width: 0.7vw;
+        height: 5vw;
+    }
+
+    .grass-patchOne,
+    .grass-patchTwo,
+    .grass-patchThree,
+    .grass-patchFour{
+        bottom: 1vh;
+    }
+}
