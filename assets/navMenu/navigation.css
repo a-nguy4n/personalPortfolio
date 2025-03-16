@@ -1,0 +1,246 @@
+@font-face{
+    font-family: "Finger Paint";
+    src: url("/assets/fonts/FingerPaint-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+
+@font-face{
+    font-family: "Gaegu";
+    src: url("/assets/fonts/Gaegu-Regular.ttf") format("truetype");
+    font-weight: 400; 
+}
+
+.nav-link{
+    font-family: "Gaegu";
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-menu {
+    display: none;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFAF2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 32vw; 
+    padding: 15px 20px;
+    font-size: 1.3vw;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-family: "Gaegu", sans-serif;
+}
+
+.dropdown-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.from-section {
+    flex: 1; 
+    text-align: left;
+}
+
+
+.to-section {
+    flex: 1; 
+    text-align: left;
+}
+
+#fromNav, #toNav {
+    font-weight: bold;
+    font-size: 1.6vw;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.from-link {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+    font-size: 1.3vw;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    margin-left: 10%;
+}
+
+.routes {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-left: 10%;
+}
+
+.routes a {
+    display: block;
+    padding: 5px 0;
+    font-size: 1.3vw;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+#home-hov:hover{
+    color: #079895  !important; 
+}
+
+#resume-hov:hover{
+    color: #D268AC  !important; 
+}
+
+#projects-hov:hover{
+    color:#90C28B !important;
+}
+
+#caseStudies-hov:hover{
+    color:#3998D3 !important;
+}
+
+#extraDetails-hov:hover{
+    color:#B0081F !important;
+}
+
+#contact-hov:hover{
+    color:#655CB3 !important;
+}
+
+.navStamp-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+#wave-image{
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    /* transform: rotate(-4deg) translateY(3%); */
+    left: 17vw; 
+    top: 0.5vw;
+}
+
+svg{
+    width: 16vw;
+    height: 8vw;
+    z-index: 2;  
+}
+
+text{
+    font-family: "Finger Paint";
+    font-weight: bold;
+}
+
+#topInnerCurve-text{
+    fill: black;
+    font-size: 1.7vw;
+}
+#innerCurve-text{
+    fill: white;
+    font-size: 2.75vw;
+}
+
+body[data-page="home"] #outer-oval{
+    stroke: #000000;
+}
+body[data-page="resume"] #wave-image{
+    content: url("/assets/images/navigation/green-wave.png");
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    left: 17vw; 
+    top: 0.5vw;
+}
+
+/* Resume Page Styles */
+body[data-page="resume"] #outer-oval{
+    stroke: #000000;
+}
+body[data-page="resume"] #wave-image{
+    content: url("/assets/images/navigation/green-wave.png");
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    left: 17vw; 
+    top: 0.5vw;
+}
+
+/* Projects Page Styles */
+body[data-page="projects"] #outer-oval{
+    stroke: black;
+}
+body[data-page="projects"] #wave-image{
+    content: url("/assets/images/navigation/red-wave.png");
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    transform: rotate(4deg);
+    left: 18vw; 
+    top: -0.4vw;
+}
+
+/* Case Studies Page Styles */
+body[data-page="caseStudies"] #outer-oval{
+    stroke: black;
+}
+body[data-page="caseStudies"] #wave-image{
+    content: url("/assets/images/navigation/purple-wave.png");
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    transform: rotate(0deg) translateY(3%);
+    left: 18vw; 
+    top: 0.1vw;
+}
+
+
+/* Contact Page Styles */
+body[data-page="contactMe"] #outer-oval{
+    stroke: black;
+}
+body[data-page="contactMe"] #wave-image{
+    content: url("/assets/images/navigation/blue-wave.png");
+    width: 18vw;
+    height: 4vw;
+    position: relative;
+    z-index: 1;  
+    transform: rotate(-4deg) translateY(3%);
+    left: 12vw; 
+    top: 0.5vw;
+}
+
+/* Extra Details Page Styles */
+body[data-page="extraDetails"] #outer-oval {
+    stroke: black;
+}
+body[data-page="extraDetails"] #wave-image {
+    content: url("/assets/images/squiggleMagenta.png");
+    width: 18vw;
+    height: 7.5vw;
+    position: relative;
+    z-index: 1;  
+    transform: rotate(0deg) translateY(5%);
+    left: 10vw; 
+    top: 0vw;
+}
