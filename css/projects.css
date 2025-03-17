@@ -33,6 +33,22 @@ h2{
     font-weight: 200;
 }
 
+#projectTwo{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    text-decoration: none;
+    font-family: "Roboto Mono";
+    background-color: #B0081F;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#projectTwo:hover{
+    background-color: #7a0817;
+}
+
 .projectsNav-position{
     position: absolute; 
     top: 2%; 

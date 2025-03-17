@@ -2,7 +2,7 @@
 
 ## Enhancements Made  
 - Improved UI/UX for project cards  
-- Added animations for a smoother experience  
+- Added animations 
 - Ensured better mobile responsiveness  
 - Optimized JavaScript to dynamically load content:  
   - Dynamic navigation menu:  
