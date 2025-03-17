@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="/css/projects.css"> 
+</head>
+
+<body data-page="projects">
+    
+    <div class="projectHeaders">
+        <h1> My Projects</h1>
+        <h2> A Postcard Collection</h2>
+    </div>
+
+    <div class="projectsNav-position" id="navigationMenu"></div>
+
+    <div class="data-buttons">
+        <button id="load-local">Load Local</button>
+        <button id="load-remote">Load Remote</button>
+    </div>
+    
+
+    <div class="projects-container" id="projectsContainer"></div>
+
+    <script src="/assets/navMenu/navigation.js"></script>
+    <script src="/js/projectCardComp.js" defer></script>
+    <script src="/js/storeProjects.js" defer></script>
+    <script src="/js/loadProjectsButton.js" defer></script>
+
+
+</body>
+</html>
