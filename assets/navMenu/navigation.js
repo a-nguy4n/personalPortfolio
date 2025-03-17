@@ -1,6 +1,6 @@
 
 // Function to load Nav Stamp for each page 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (){
     fetch("/assets/navMenu/navigation.html")
         .then(response => response.text())
         .then(data => {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to load custom stylings for Nav per page 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (){
     const waveImage = document.getElementById("wave-image");
     const outerOval = document.getElementById("outer-oval");
     const currentPage = document.body.getAttribute("data-page");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Function to capture last visited page and update Nav 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (){
     fetch("/assets/navMenu/navigation.html")
         .then(response => response.text())
         .then(data => {
@@ -60,7 +60,7 @@ function updateNavigation(){
     let previousPage = localStorage.getItem("previousPage") || "home";
 
     const pageMapping = {
-        home: { file: "index.html", name: "Home", id: "home-hov" },
+        home: { file: "home.html", name: "Home", id: "home-hov" },
         resume: { file: "pages/resume.html", name: "Resume", id: "resume-hov" },
         projects: { file: "pages/projects.html", name: "Projects", id: "projects-hov" },
         caseStudies: { file: "pages/caseStudies.html", name: "Case Studies", id: "caseStudies-hov" },
@@ -79,18 +79,18 @@ function updateNavigation(){
     }
 
     const toLinksContainer = document.querySelector(".routes");
-    if (toLinksContainer) {
+    if (toLinksContainer){
         toLinksContainer.innerHTML = ""; 
         Object.keys(pageMapping).forEach((page) => {
-            if (page !== currentPage && page !== previousPage) {
+            if (page !== currentPage && page !== previousPage){
                 const link = document.createElement("a");
                 link.href = `/${pageMapping[page].file}`;
                 link.textContent = pageMapping[page].name;
                 link.id = pageMapping[page].id;
-                link.addEventListener("mouseover", function () {
+                link.addEventListener("mouseover", function (){
                     this.style.color = getHoverColor(page);
                 });
-                link.addEventListener("mouseout", function () {
+                link.addEventListener("mouseout", function (){
                     this.style.color = "black"; 
                 });
 
@@ -112,5 +112,6 @@ function getHoverColor(page) {
         extraLink: "#B0081F",
         contactMe: "#655CB3",
     };
+
     return hoverColors[page] || "black";
 }

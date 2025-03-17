@@ -1,84 +1,88 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang = "en"> 
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/homePage.css">
-    <title> Main Page</title>
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/postfolioTitle.css">
+    <link rel="stylesheet" href="css/mailbox.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Landing Page</title>
 </head>
 
-<body data-page="home">
-   <div class="homeCardHeader">
-        <h1 id="homeCardTitle"> Postfolio</h1>
-        <section class="address">
-            <h2 id="myName">  Allison Nguyen </h2>
-            <p>Computer Engineering | Design Minor</p>
-            <p>UC San Diego</p>
-            <p>1512alli@gmail.com</p>
-        </section>
+<body>
+    <div class="landingPageContainer">
+        <div class="innerCardColor">
+            <section id="landingHeaders"> 
+                <div class="header-col">
+                    <h1 id="greetings"> Greetings </h1> 
+                    <h1 id="from-my"> from my </h1> 
+                </div>
+                <h1 class="post-position" id="postfolio-title"> POSTFOLIO </h1>
+            </section>
+    
+            <div class="bottomRow">
             
-        <div class="home-stamp"> 
-            <img src="../assets/images/stampOutline.png" alt="StampOutline" id="homeStampOutline">
-            <img src="../assets/images/stampProfile.png" alt="StampProfile" id="homeStampProfile">
-             <img src="../assets/images/squiggleMagenta.png" alt="MagentaSquiggle" id="homeStampSquiggle">
+               <div class="mailbox-container">
+                       <div class="mailbox">
+                           <div class="box">
+                               <div class="lid"></div>
+                               <div class="side-opening"></div>
+                               <div class="flag"></div>
+                               <button class="letter" onclick="window.location.href='home.html'"> HOME </button>
+                           </div>
+                           <div class="pole"></div>
+                           <div class="grass-flatpatch"></div>
+                           <div class="grass-patchOne">
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                               <div class="grassblade-typeOne"></div>
+                           </div>
+       
+                           <div class="grass-patchTwo">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div>
+                   
+                           <div class="grass-patchThree">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div>
+                   
+                           <div class="grass-patchFour">
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                               <div class="grassblade-typeTwo"></div>
+                           </div> 
+                       </div>
+                   </div>
+    
+                    <section class="tagLineText">
+                        <p id="landingTagLine"> 
+                        A collection of my works as a <span data-color="olive">computer engineer</span> 
+                        and <span data-color="mulberry">designer</span> turning ideas into 
+                        <span data-color="teal">innovative, human-centered</span> solutions. 
+                        <br>
+                        <br>
+                        Feel free to explore my work and learn about creative process. 
+                        </p>
+                    </section>
+               </div>
         </div>
     </div>
-
-    <!--  <div class="homeNav-position" id="navigationMenu"></div> -->
-
-    <div class="homeContentBody">
-        <section class="aboutMe">
-            <h2 class="sectionHeaders"> About Me</h2>
-            <p id="about-description">
-                &nbsp;&nbsp; Hello! My name is Allison Nguyen! I am currently a student at the University of 
-                California, San Diego studying Computer Engineering and minoring in Design. I choose to study 
-                Computer Engineering as it provides me the best of both worlds with software and hardware.
-                <br>
-                <br>
-                &nbsp;&nbsp; In the future, I aspire to be a product designer of sorts where I can work between 
-                software, hardware, and design. I hope to one day develop and design a product that can serve 
-                to be a great vitamin for everyday life.
-                <br>
-                <br>
-                &nbsp;&nbsp; Beyond my academic journey, I enjoy spending time outdoors and discovering new
-                places. Specifically, I love going around and trying out new coffee shops and bakeries, 
-                hiking new trails, or just listening to music on walks.
-                <br>
-                <br>
-                &nbsp;&nbsp; A little fun fact about me is that wherever I go or travel to, I collect postcards
-                as a souvenir. I feel like postcards are a small, but meaningful (and inexpensive) way to capture
-                my experiences and snapshots from my travels. 
-            </p>
-        </section>
-
-        <hr class="vertical-hr">
-      
-        <section class="directory">
-            <h2 class="sectionHeaders"> To: </h2>
-            <nav class="homeNav">
-                <a href="/pages/resume.html" id="resumeLink">Resume</a>
-                <a href="/pages/projects.html" id="projectsLink">Projects</a>
-                <a href="/pages/caseStudies.html" id="caseStudiesLink">Case Studies</a>
-                <a href="extraDetails.html" id="extraLink">My Extra Details</a>
-                <a href="/pages/contactMe.html" id="contactMeLink"> Contact Me</a>    
-                <a class="hidden-text" id="hiddenLine">&nbsp;</a> 
-            </nav>
-
-            <section class="socialBar">
-                <a href="https://www.linkedin.com/in/allison-nguyen-668598296/" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/images/linkedIn_icon.png" alt="linkedinIcon">
-                </a>
-    
-                <a href="https://github.com/a-nguy4n" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/images/githubIcon.png" alt="gitIcon">
-                </a>
-    
-                <a href="mailto:1512alli@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <img src="../assets/images/gmailIcon.png" alt="gmailIcon">
-                </a>
-            </section>
-        </section>
-    </div>
-   
 </body>
 </html>
