@@ -1,16 +1,34 @@
-/* General Page Styling */
+@font-face{
+    font-family: "Roboto Mono";
+    src: url("../assets/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Inconsolata";
+    src: url("../assets/fonts/Inconsolata-VariableFont.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 body{
     background-color: #FFFAF2;
-    font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 3vw;
     color: #3998D3;
-    margin-bottom: 20px;
+    font-family: "Roboto Mono";
+}
+
+h2{
+    font-size: 1.3vw;
+    color: #3998D3;
+    margin-bottom: 5%;
+    font-family: "Roboto Mono";
+    font-weight: 200;
 }
 
 .caseStudiesNav-position{
@@ -23,39 +41,83 @@ h1{
     justify-content: flex-end;
     z-index: 5; 
 }
-
-.case-studies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 80%;
-    max-width: 900px;
+.vertical-carousel-container {
+    width: 60vw; 
+    height: 80vw;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
+    padding: 10px;
 }
 
-.case-study {
+.vertical-carousel{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 1vw;
+}
+
+.vertical-slide{
+    display: flex;
+    align-items: center;
+    width: 55vw;
+    height: 20vh;
     background: white;
-    border: 3px solid #3998D3;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(142, 142, 142, 0.2);
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-.case-study:hover{
+.vertical-slide-link{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5%;
+}
+
+.stamp-section{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #30ace1, #5db2d7); 
+    height: 100%;
+}
+
+.stamp{
+    width: 8vw; 
+    height: 9vw;
+    background: #dee0d7; 
+    position: relative;
+    border-radius: 5px; 
+    mask: 
+        radial-gradient(circle, #000 40%, transparent 41%) 
+        repeat space 8px 8px / 10px 10px, 
+        linear-gradient(white, white);
+}
+
+.text-section{
+    width: 65%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inconsolata";
+    
+}
+
+.text-section h3{
+    font-size: 1.5vw;
+    margin-bottom: 5px;
+}
+
+.text-section p{
+    font-size: 1vw;
+    color: #555;
+}
+
+.vertical-slide:hover{
     transform: scale(1.05);
-}
-
-.case-study img{
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.work-in-progress{
-    background: #E0F2FF;
-    border: 2px dashed #3998D3;
-    color: #3998D3;
-    font-weight: bold;
-    padding: 40px;
 }

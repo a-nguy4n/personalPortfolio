@@ -63,7 +63,7 @@ function updateNavigation(){
         home: { file: "index.html", name: "Home", id: "home-hov" },
         resume: { file: "pages/resume.html", name: "Resume", id: "resume-hov" },
         projects: { file: "pages/projects.html", name: "Projects", id: "projects-hov" },
-        caseStudies: { file: "caseStudies.html", name: "Case Studies", id: "caseStudies-hov" },
+        caseStudies: { file: "pages/caseStudies.html", name: "Case Studies", id: "caseStudies-hov" },
         extraDetails: { file: "extraDetails.html", name: "Extra Details", id: "extraDetails-hov" },
         contactMe: { file: "pages/contactMe.html", name: "Contact Me", id: "contact-hov" },
     };

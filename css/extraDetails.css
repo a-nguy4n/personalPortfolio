@@ -1,0 +1,28 @@
+@font-face{
+    font-family: "Roboto Mono";
+    src: url("../assets/fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+body{
+    background-color: #FFFAF2;
+    margin: 0;
+    height: 100vh;
+}
+
+#extraPageTitle{
+    font-family: "Roboto Mono";
+    color:#B0081F;
+    margin-left: 5%;
+    font: 3vw;
+}
+
+.extraDetailsNav-position{
+    position: absolute; 
+    top: 2%; 
+    right: 3%; 
+    width: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5; 
+}
